@@ -52,17 +52,18 @@
 
 
                 ?>
-                <div class="col-xl-12">
-                    <form style="display:inline-block">
-                        <div>Seu Palpite</div>
-                        <input style="margin-bottom: 10px" class="input-form" type="text" name="n1" placeholder="Jogada" /><br>
-                        <button class="btn btn-primary shadow" type="submit" value="Fazer jogo" style="margin-right: 10px;">JOGAR</button>
-                    </form>
-                    <form style="display: inline-block">
-                        <input type="hidden" name='acao' value="reset" />
-                        <button class="btn btn-primary shadow" type="submit" value="Reset" style="margin-left: -100px;background: var(--bs-red);border-color: var(--bs-red);">RESET</button>
-                    </form>
-                </div>
+                <form>
+                    <div>Seu Palpite</div>
+                    <input class="input-form" type="text" name="n1" placeholder="Jogada" /><br>
+                    <input class="btn btn-primary" type="submit" value="Fazer jogo" />
+                </form>
+
+
+                <form>
+                    <input type="hidden" name='acao' value="reset" />
+                    <input class="btn btn-danger" type="submit" value="Reset" />
+                </form>
+            </div>
             </div>
         </div>
     </section>

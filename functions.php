@@ -86,7 +86,7 @@ function palpitar($palavras)
 
     if (isset($_GET['n1']) && $_GET['n1'] != "") {
         $jogada = $_GET["n1"];
-        echo "<h4> O seu palpite foi:" . $jogada . "</h4><br><br>";
+        echo "<h4> O seu palpite foi: " . $jogada . "</h4><br><br>";
 
         // verifica se a letra que foi digitada está na palavra / ou não.
      

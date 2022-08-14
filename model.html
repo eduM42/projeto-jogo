@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
 </head>
 
@@ -34,34 +34,8 @@
                 </div>
             </div>
             <div class="py-5 p-lg-5">
-                <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;"></div>
-                <?php
-                require_once 'functions.php';
-                session_start();
-
-                $palavras = file_get_contents("substantivos.txt");
-                $palavras = explode("\n", $palavras);
-
-                inicializarJogo($palavras);
-
-                palpitar($palavras);
-
-                mostrarPalavraEscolhida();
-
-                mostrarTentativasErradas();
-
-
-                ?>
-                <div class="col-xl-12">
-                    <form style="display:inline-block">
-                        <div>Seu Palpite</div>
-                        <input style="margin-bottom: 10px" class="input-form" type="text" name="n1" placeholder="Jogada" /><br>
-                        <button class="btn btn-primary shadow" type="submit" value="Fazer jogo" style="margin-right: 10px;">JOGAR</button>
-                    </form>
-                    <form style="display: inline-block">
-                        <input type="hidden" name='acao' value="reset" />
-                        <button class="btn btn-primary shadow" type="submit" value="Reset" style="margin-left: -100px;background: var(--bs-red);border-color: var(--bs-red);">RESET</button>
-                    </form>
+                <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
+                    <div class="col-xl-12"><a class="btn btn-primary shadow" role="button" href="signup.html" style="margin-left: 10px;margin-right: 10px;">JOGAR</a><a class="btn btn-primary shadow" role="button" href="signup.html" style="background: var(--bs-red);margin-right: 10px;margin-left: 10px;border-color: var(--bs-red);">RESET</a></div>
                 </div>
             </div>
         </div>
@@ -79,9 +53,10 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bold-and-dark.js"></script>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bold-and-dark.js"></script>
+    <script id="bs-live-reload" data-sseport="49277" data-lastchange="1660513654322" src="/js/livereload.js"></script>
 </body>
 
 </html>
