@@ -18,9 +18,10 @@
                     </svg></span><span>Semana de 22</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="play.php">Jogo</a></li>
-                </ul><a class="btn btn-primary shadow" role="button" href="signup.html">JOGAR</a>
+		<li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+		<li class="nav-item"><a class="nav-link active" href="play.php">Jogo</a></li>
+ 		<li class="nav-item"><a class="nav-link active" href="getFile.php">Buscar arquivo</a></li>
+		</ul><a class="btn btn-primary shadow" role="button" href="signup.html">JOGAR</a>
             </div>
         </div>
     </nav>
@@ -56,7 +57,7 @@
                 <div class="col-xl-12">
                     <form style="display:inline-block">
                         <div>Seu Palpite</div>
-                        <input style="margin-bottom: 10px" class="input-form" type="text" name="n1" placeholder="Jogada" /><br>
+                        <input style="margin-bottom: 10px" class="input-form" type="text" maxlength= "1" name="n1" placeholder="Jogada" /><br>
                         <button class="btn btn-primary shadow" type="submit" value="Fazer jogo" style="margin-right: 10px;">JOGAR</button>
                     </form>
                     <form style="display: inline-block">
@@ -77,6 +78,7 @@
             <hr>
             <div class="text-muted d-flex justify-content-between align-items-center pt-3">
             <p class="mb-0">Projeto do jogo PHP - Eduardo Ozório (GU302685X), Luca Andrade (GU3027813)</p>
+            <a href="https://github.com/eduM42/projeto-jogo">Código-fonte no GitHub</a>
             </div>
         </div>
     </footer>
