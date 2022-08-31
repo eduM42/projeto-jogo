@@ -1,8 +1,7 @@
-//ALUNOS: EDUARDO OZORIO (GU302685X), LUCA DE ANDRADE (GU3027813)
-//TURMA A - ADSD2
-//DATA 03 DE SETEMBRO DE 2O22
-
 <?php
+	//ALUNOS: EDUARDO OZORIO (GU302685X), LUCA DE ANDRADE (GU3027813)
+	//TURMA A - ADSD2
+	//DATA 03 DE SETEMBRO DE 2O22
     $palavras = array( //Array usado para armazenar as palavras
         "arte",
         "tarsila-do-amaral",
