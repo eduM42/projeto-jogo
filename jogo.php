@@ -1,8 +1,16 @@
 <?php
-    $palavras = array(
+    $palavras = array( //Array usado para armazenar as palavras
         "arte",
-        "tarsila",
+        "tarsila-do-amaral",
+        "oswald-de-andrade",
+        "anita-malfatti",
+        "manuel-bandeira",
+        "graca-aranha",
+
         "abaporu",
+        "os-operarios",
+        "a-boba",
+        
         "pau-brasil",
         "verde-amarelo",
         "antropofagico",
@@ -15,9 +23,56 @@
         "parnasianismo",
     );
 
-    $seletor = rand(0,12);
-    $palavra = $palavras[$seletor];
-    $letra = $_GET["n1"];
+    $dicas = array( //Array usado para dar dicas as respectivas palavras acima
+        "Produção cultural",
+        "Artista",
+        "Artista",
+        "Artista",
+        "Artista",
+        "Artista",
+
+        "Nome de produção",
+        "Nome de produção",
+        "Nome de produção",
+
+        "Movimento Cultural",
+        "Movimento Cultural",
+        "Movimento Cultural",
+        "Movimento Cultural",
+        "Movimento Cultural",
+        "Movimento Cultural",
+        "Movimento Cultural",
+        "Movimento Cultural",
+        "Movimento Cultural",
+        "Movimento Cultural",
+    );
+    $detalhes = array( //Array usado para dar dicas mais detalhadas referentes as palavras
+        "Foco do Movimento",
+        "Grande destaque",
+        "Poeta",
+        "Representou o Exprecionismo",
+        "Poeta",
+        "Aracnideo",
+
+        "Pé Grande",
+        "Trabalho",
+        "Fuji",
+
+        "Nome de Arvore",
+        "Cores da Bandeira",
+        "Rito de Canibalismo",
+        "Lembra o Futuro",
+        "Formas Geométricas",
+        "Caráter Ilógico",
+        "Doidera",
+        "Representa Sentimentos",
+        "Minimalismo",
+        "Perfeccionistas",
+
+    );
+    $seletor = rand(0,18); //Variável que receberá um valor aleatório de rand para selecionar a palavra respectiva
+    $palavra = $palavras[$seletor]; //Utiliza a variável "seletor" para definir a palavra do jogo
+    $letra = $_GET["n1"]; //Puxa a resposta do usuário
 
 
     echo "<h1 style=\"text_align:center\">Jogo da forca - Semana da Arte Moderna</h1>";
@@ -46,4 +101,3 @@
     echo "<br><br>Tentativas erradas:$erro <br>";
 
 ?>
-
