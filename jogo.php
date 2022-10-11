@@ -1,4 +1,17 @@
 <?php
+
+/*
+    Funções necessárias:
+
+    1- Incia o jogo -> Selecionar uma palavra (se o jogo não tiver começado ainda), colocar os traços correspondentes a cada letra;
+
+    2- Verifcar o palpite -> Se acertar, vai colocar a letra na sua posição correspondente, se errar, vai colocar nos palpites errados e descontar uma tentativa;
+
+    3- Da as dicas -> Caso o jogador solicite dicas, ela exibe dependendo do número de tentativas;
+
+    4- Teclado virtual;
+*/
+
 	//ALUNOS: EDUARDO OZORIO (GU302685X), LUCA DE ANDRADE (GU3027813)
 	//TURMA A - ADSD2
 	//DATA 03 DE SETEMBRO DE 2O22
@@ -73,6 +86,7 @@
         "Perfeccionistas",
 
     );
+    
     $seletor = rand(0,18); //Variável que receberá um valor aleatório de rand para selecionar a palavra respectiva
     $palavra = $palavras[$seletor]; //Utiliza a variável "seletor" para definir a palavra do jogo
     $letra = $_GET["n1"]; //Puxa a resposta do usuário
