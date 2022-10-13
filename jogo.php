@@ -8,6 +8,16 @@
     <title>Semana da Arte Moderna</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <style>
+        .teclado{
+            width: 35px;
+            height: 35px;
+            border: 3px solid red;
+            border-radius: 10%;
+            text-align: center;
+            margin: 5px;
+        }
+    </style>
 </head>
 
 <body style="/*background: url(&quot;design.jpg&quot;);*/background-position: 0 -60px;">
@@ -54,6 +64,8 @@
         //ALUNOS: EDUARDO OZORIO (GU302685X), LUCA DE ANDRADE (GU3027813)
         //TURMA A - ADSD2
         //DATA 03 DE SETEMBRO DE 2O22
+
+
         $palavras = array( //Array usado para armazenar as palavras
             "arte",
             "tarsila-do-amaral",
@@ -163,7 +175,9 @@
             
         }
         function verifica(){
-            $letra = $_POST['n1'];
+            $letras = array('q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'ç', 'z', 'x', 'c', 'v', 'b', 'n', 'm');
+
+            $letra = $_POST['letra'];
             $palpite = $_SESSION['palpite'];
             $palavra = $_SESSION['palavra'];
             echo $palavra;
@@ -190,7 +204,8 @@
             $_SESSION['palpite'] = $palpite;
             $_SESSION['palavra'] = $palavra;
 
-            echo "<h1 style=\"text_align:center\">Jogo da forca - Semana da Arte Moderna</h1>";
+            echo "<h1 id='teclado' style=\"text_align:center\">Jogo da forca - Semana da Arte Moderna</h1>";
+
             if($erro == 3){
                 echo "<h2>Dica simples: ".dicas($_SESSION['seletor'], 1)."</h2>";
             }else if($erro == 5){
@@ -199,6 +214,14 @@
             echo "<br><br>Letra escolhida: $letra<br>";
             echo "<br>Palavra escolhida:<br>";
             echo "<br><br>".$palpite."<br><br>";
+            foreach ($letras as $l) {
+                if($l == 'p' || $l == 'ç'){
+                    echo "<form method='POST' action='#teclado'><button style='float:left' class='teclado' name ='letra' value='$l'>$l</button></form>";
+                    echo "<br><br>";
+                }else{
+                    echo "<form method='POST' action='#teclado'><button style='float:left' class='teclado' name ='letra' value='$l'>$l</button></form>";
+                }
+            }
             echo "<br><br>Tentativas erradas:".$erro." <br>";
 
             if(strcmp($palpite, $palavra) == 0){
