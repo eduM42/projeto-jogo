@@ -174,7 +174,7 @@
             
         }
         function verifica(){
-            $letras = array('q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'ç', 'z', 'x', 'c', 'v', 'b', 'n', 'm');
+            $letras = array('q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'ç', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '-');
 
             $letra = $_POST['letra'];
             $palpite = $_SESSION['palpite'];
@@ -229,7 +229,6 @@
 
                 echo "<h1 style='color:green'>Parabéns, você ganhou!!!!</h1>";
                 echo "<br><br><form action=\"#\" method=\"POST\">
-                <input type=\"text\" name=\"n1\" placeholder=\"Insira uma letra\"/>
                 <button type=\"submit\" value=\"jogada\">REINICIAR</button>
                 </form>";
             }else if($erro >= 6){
@@ -237,14 +236,12 @@
                 $_SESSION['run'] = false;
                 echo "<h1 style='color:red'>Você perdeu!!!!</h1>";
                 echo "<br><br><form action=\"#\" method=\"POST\">
-                <input type=\"text\" name=\"n1\" placeholder=\"Insira uma letra\"/>
                 <button type=\"submit\" value=\"jogada\">REINICIAR</button>";
             }else if($_POST['reset'] == 6){
                 echo "<h1 style='color:blue'>Reiniciando...!!!!</h1>";
                 echo "<a href='#'>Voltar</a>";
             }else{
                 echo "<br><br><form action=\"#\" method=\"POST\">
-                <input type=\"text\" name=\"n1\" placeholder=\"Insira uma letra\"/>
                 <button class=\"btn btn-primary shadow\" type=\"submit\" value=\"Fazer jogo\" style=\"margin-right: 10px;\">JOGAR</button>
                 <button class=\"btn btn-primary shadow\" type=\"submit\" value=\"Reset\" style=\"margin-left: 0px;background: var(--bs-red);border-color: var(--bs-red);\">RESET</button>
 
