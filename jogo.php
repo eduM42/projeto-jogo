@@ -153,7 +153,7 @@
         function init_jogo($palavras = array()){
             session_start();
             if($_SESSION['run'] == false){
-                $palpite = ""; //Definindo variáveis para esse corno filho da puta
+                $palpite = ""; //Definindo variáveis
 
                 //$palavras = file_get_contents("substantivos.txt");
                 $seletor = rand(0,18); //Variável que receberá um valor aleatório de rand para selecionar a palavra respectiva
